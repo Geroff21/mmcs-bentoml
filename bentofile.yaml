@@ -1,0 +1,12 @@
+service: "yolo_service:svc"
+description: "YOLOv8 object detection service"
+labels:
+  app: "yolo"
+  type: "object-detection"
+include:
+  - "*.py"
+  - "yolov8n.pt"
+python:
+  packages:
+    - ultralytics
+    - bentoml
